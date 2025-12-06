@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 預設行程資料結構: 每個 day 的值是一個包含行程字串的陣列
     const defaultData = {
-        '0': ['在這裡記下所有需要採買的禮物清單！'],
-        '1': ['請在這裡輸入 Day 1 的行程計畫...'],
-        '2': ['請在這裡輸入 Day 2 的行程計畫...'],
+        '0': ['ㄏㄏ就是買買買清單'],
+        '1': ['擬好初次見面'],
+        '2': ['良旭翔大帥哥'],
         '3': ['請在這裡輸入 Day 3 的行程計畫...'],
         '4': ['請在這裡輸入 Day 4 的行程計畫...'],
         '5': ['請在這裡輸入 Day 5 的行程計畫...'],
@@ -161,4 +161,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // 預設選擇 Day 1 (因為 Day 0 是新增的特殊採買頁面)
     renderDayPlan('1');
     document.querySelector('.date-btn[data-day="1"]').classList.add('active');
+
 });
