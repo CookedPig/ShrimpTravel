@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific styles for the landing page */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            /* 淺綠色背景 */
+            background-color: #eaffea; 
+            font-family: 'Roboto', sans-serif;
+            padding: 20px;
+        }
+        .main-content {
+            padding: 40px;
+            background-color: white;
+            border-radius: 12px; /* 略微收緊圓角 */
+            /* 增加邊框和陰影，使其更有質感 */
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+            max-width: 90%;
+            width: 500px;
+            
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 15px; 
+        }
+        
+        /* 標題浮動樣式設定 */
+        h1 {
+            color: #28a745;
+            margin-bottom: 25px;
+            font-size: 2em;
+            padding: 10px 20px; 
+            background-color: #ffffff; 
+            border-radius: 8px;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+            transform: scale(1.02); 
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer; 
+        }
+        
+        h1:hover {
+            transform: scale(1.05) translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            color: #555;
+        }
+        /* Button style */
+        .nav-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: 700;
+            width: 90%; 
+            max-width: 300px;
+        }
+        .nav-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Plan button deep green color */
+        .plan-btn { 
+            background-color: #28a745;
+        }
+        .plan-btn:hover { 
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-content">
+        <h1>旭翔日本攻略大師</h1>
+        <p>哇哈哈哈 日本我們來了！！！ <br> 歡迎點擊下方按鈕進入旭翔的聖殿</p>
+        
+        <a href="plan.html" class="nav-button plan-btn">
+            ✈️ 啟程計畫
+        </a>
+    </div>
+
+</body>
+</html>

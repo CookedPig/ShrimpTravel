@@ -1,0 +1,317 @@
+/* Global Reset and Font */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+/* Container for the Travel Plan Page */
+.container {
+    background-color: #eaffea; 
+    padding: 25px; 
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 600px;
+    position: relative; 
+}
+
+/* 圓形返回按鈕樣式 */
+.back-link-btn {
+    position: absolute;
+    top: 25px; 
+    left: 25px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 32px;
+    height: 32px;
+    
+    border-radius: 50%;
+    
+    background-color: #f0f0f0; 
+    color: #28a745; 
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    z-index: 10;
+}
+
+.back-link-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+h1 {
+    text-align: center;
+    color: #28a745;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    padding-top: 5px; 
+}
+
+/* --- 水平滾動日期按鈕區 --- */
+
+.date-grid {
+    display: flex; 
+    gap: 10px;
+    margin-bottom: -20px; 
+    
+    overflow-x: scroll; 
+    overflow-y: hidden;
+    
+    flex-wrap: nowrap; 
+    
+    padding-bottom: 10px; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    
+    position: relative;
+}
+
+/* 隱藏 Webkit 瀏覽器 (Chrome, Safari) 的滾動條 */
+.date-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.date-btn {
+    padding: 15px 18px; 
+    font-size: 16px;
+    font-weight: 700;
+    color: white; 
+    background-color: #28a745; 
+    border: 1px solid #1e7e34;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, color 0.3s, opacity 0.3s, border 0.3s;
+    text-align: center;
+    
+    flex-shrink: 0; 
+    opacity: 0.7; 
+    
+    z-index: 1; 
+}
+
+/* Gift Button Style */
+.gift-btn {
+    background-color: #ffc107; 
+    color: #333;
+    padding: 15px; 
+    font-size: 1.5em; 
+    font-weight: normal; 
+    opacity: 0.7; 
+}
+
+.date-btn:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+    opacity: 1; 
+}
+
+.gift-btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-1px);
+    opacity: 1; 
+}
+
+
+/* Active State (Light Green) */
+.date-btn.active {
+    background-color: #90EE90; 
+    color: #333; 
+    border: 2px solid #1e7e34; 
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.5); 
+    opacity: 1; 
+    
+    z-index: 5; 
+    transform: translateY(-2px); 
+}
+
+/* --- 黃色主題覆蓋 (當 gift-active 存在時) --- */
+.container.gift-active {
+    background-color: #fffacd; 
+}
+
+.container.gift-active h1,
+.container.gift-active .back-link-btn {
+    color: #ffc107; 
+}
+
+.container.gift-active .back-link-btn {
+     color: #ffc107;
+     border-color: #ffc107;
+}
+
+.container.gift-active h2 {
+    color: #ffc107; 
+}
+
+.container.gift-active .date-btn {
+    background-color: #ffd700; 
+    border: 1px solid #ccab00; 
+}
+
+.container.gift-active .date-btn:hover {
+    background-color: #ffc107;
+}
+
+.container.gift-active .date-btn.active {
+    background-color: #fff3c9; 
+    color: #333; 
+    border: 2px solid #ffc107; 
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.5); 
+}
+
+.container.gift-active .itinerary-block {
+    border-left: 5px solid #ffc107; 
+}
+
+.container.gift-active .save-block-btn {
+    background-color: #ffc107; 
+    color: #333;
+}
+
+.container.gift-active .save-block-btn:hover {
+    background-color: #e0a800;
+}
+
+.container.gift-active #create-block-btn {
+    background-color: #ffd700; 
+    color: #333;
+}
+
+.container.gift-active #create-block-btn:hover {
+    background-color: #ffc107;
+}
+
+
+/* --- 行程內容區塊 --- */
+
+#content-panel {
+    background-color: white;
+    padding: 20px;
+    margin: -25px; 
+    margin-top: 0; 
+    border-radius: 0 0 12px 12px; 
+    padding-top: 45px; 
+    z-index: 2; 
+    position: relative;
+    border-top: 1px solid white; 
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05); 
+}
+
+#day-details {
+    padding: 0; 
+    border: none; 
+    background-color: transparent; 
+    min-height: 100px;
+    padding-top: 5px;
+}
+
+/* 每日行程的主標題 (基礎) */
+#day-details h2 {
+    color: #28a745;
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* 單個行程區塊的卡片樣式 */
+.itinerary-block {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff; 
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border-left: 5px solid #66bb6a; 
+}
+
+.itinerary-block textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+/* 操作按鈕 (Save/Delete) 樣式 */
+.block-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.2s;
+}
+
+.save-block-btn {
+    background-color: #66bb6a;
+    color: white;
+}
+
+.save-block-btn:hover {
+    background-color: #4caf50;
+}
+
+.delete-block-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-block-btn:hover {
+    background-color: #c82333;
+}
+
+/* 新增區塊的按鈕 */
+#create-block-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    /* **關鍵修正：增加圓角半徑以實現圓角矩形/橢圓形** */
+    border-radius: 20px; 
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#create-block-btn:hover {
+    background-color: #218838;
+}
+
+
+/* Desktop override */
+@media (min-width: 601px) {
+    .date-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); 
+        overflow-x: unset;
+        padding-bottom: 0;
+        margin-bottom: -20px;
+    }
+}
